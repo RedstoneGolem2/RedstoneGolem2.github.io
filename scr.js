@@ -253,7 +253,7 @@ function onClick(e){
 addEventListener("touchend", touc);
 
 function touc(){
-	dead.play();
+	ded.play();
 }
 
 function reset(){
