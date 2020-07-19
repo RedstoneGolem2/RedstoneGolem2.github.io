@@ -13,7 +13,7 @@ let PW=50;
 let PH=120;
 let pipeSpeed = 0.7;
 let Coins=0;
-let megdu = PW;
+let megdu = 175;
 let inPipe = false;
 let isStarted = false;
 let a = 1;
@@ -248,6 +248,26 @@ addEventListener("click", onClick);
 function onClick(e){
 	mouseX = e.pageX - canvas.offsetLeft;
 	mouseY = e.pageY - canvas.offsetTop;
+}
+
+addEventListener("touchend", touc);
+
+function touc(){
+	if(isStarted==true){
+		if(death==false){
+			if(isJumping==false){
+				Y=0;
+				jump();
+				isJumping=true;
+			}
+		}
+	}
+	if(isStarted==false){
+		Y=0;
+		jump();
+		isStarted=true;
+		isJumping=true;
+	}
 }
 
 function reset(){
