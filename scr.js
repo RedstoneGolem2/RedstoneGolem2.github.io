@@ -17,7 +17,6 @@ let megdu = 175;
 let inPipe = false;
 let isStarted = false;
 let a = 1;
-let b = 1;
 let BestCoins = 0;
 
 let PLX=0;
@@ -157,10 +156,7 @@ function draw(){
 	if(Y<0){
 		if(isJumping==true){
 			context.drawImage(jet,BallX-10.5,BallY+radius);
-			if(b==1){
-				fly.play();
-				b=0;
-			}
+			fly.play();
 		}
 	}
 	context.drawImage(road,PLX,canvas.height-canvas.height/8);//road
@@ -175,22 +171,6 @@ function draw(){
 			PLX-=pipeSpeed;
 			PLX2-=pipeSpeed;
 			PLX3-=pipeSpeed;
-		}
-		if(mouseY>0&&mouseX>0){
-			if(isStarted==false){
-				Y=0;
-				jump();
-				isStarted=true;
-				isJumping=true;
-			}
-			b=1;
-			Y=0;
-			jump();
-			isJumping=true;
-			mouseX=0;
-			mouseY=0;
-		}else{
-			isJumping=true;
 		}
 	}else{
 		if(a==1){
@@ -268,6 +248,26 @@ addEventListener("click", onClick);
 function onClick(e){
 	mouseX = e.pageX - canvas.offsetLeft;
 	mouseY = e.pageY - canvas.offsetTop;
+}
+
+addEventListener("touchend", touc);
+
+function touc(){
+	if(isStarted==true){
+		if(death==false){
+			if(isJumping==false){
+				Y=0;
+				jump();
+				isJumping=true;
+			}
+		}
+	}
+	if(isStarted==false){
+		Y=0;
+		jump();
+		isStarted=true;
+		isJumping=true;
+	}
 }
 
 function reset(){
