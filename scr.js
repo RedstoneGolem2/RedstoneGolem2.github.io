@@ -173,22 +173,24 @@ function draw(){
 			PLX3-=pipeSpeed;
 		}
 		if(mouseX>0&&mouseY>0){
-		   if(isStarted==true){	
-		if(death==false){	
-			if(isJumping==false){	
+			if(isStarted==true){	
+				if(death==false){	
+					if(isJumping==false){	
+						Y=0;	
+						jump();	
+						isJumping=true;	
+					}	
+				}	
+			}	
+			if(isStarted==false){	
 				Y=0;	
 				jump();	
+				isStarted=true;	
 				isJumping=true;	
 			}	
-		}	
-	}	
-	if(isStarted==false){	
-		Y=0;	
-		jump();	
-		isStarted=true;	
-		isJumping=true;	
-	}	
-		   }
+			mouseX=0;
+			mouseY=0;
+		}
 	}else{
 		if(a==1){
 			ded.play();
