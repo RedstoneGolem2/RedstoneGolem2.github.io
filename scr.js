@@ -172,6 +172,23 @@ function draw(){
 			PLX2-=pipeSpeed;
 			PLX3-=pipeSpeed;
 		}
+		if(mouseX>0&&mouseY>0){
+		   if(isStarted==true){	
+		if(death==false){	
+			if(isJumping==false){	
+				Y=0;	
+				jump();	
+				isJumping=true;	
+			}	
+		}	
+	}	
+	if(isStarted==false){	
+		Y=0;	
+		jump();	
+		isStarted=true;	
+		isJumping=true;	
+	}	
+		   }
 	}else{
 		if(a==1){
 			ded.play();
@@ -243,26 +260,6 @@ function stopMove(e){
 	}
 }
 
-addEventListener("touchstart", f);
-addEventListener("touchend", fend);
-
-function f(e){	
-	if(isStarted==true){	
-		if(death==false){	
-			if(isJumping==false){	
-				Y=0;	
-				jump();	
-				isJumping=true;	
-			}	
-		}	
-	}	
-	if(isStarted==false){	
-		Y=0;	
-		jump();	
-		isStarted=true;	
-		isJumping=true;	
-	}	
-}
 
 addEventListener("click", onClick);
 
