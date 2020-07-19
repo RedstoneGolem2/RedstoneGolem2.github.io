@@ -250,25 +250,6 @@ function onClick(e){
 	mouseY = e.pageY - canvas.offsetTop;
 }
 
-addEventListener("touchend", touc);
-
-function touc(){
-	if(isStarted==true){
-		if(death==false){
-			if(isJumping==false){
-				Y=0;
-				jump();
-				isJumping=true;
-			}
-		}
-	}
-	if(isStarted==false){
-		Y=0;
-		jump();
-		isStarted=true;
-		isJumping=true;
-	}
-}
 
 function reset(){
 	BallX = canvas.width/3;
