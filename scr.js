@@ -250,12 +250,6 @@ function onClick(e){
 	mouseY = e.pageY - canvas.offsetTop;
 }
 
-addEventListener("touchend", touc);
-
-function touc(){
-	ded.play();
-}
-
 function reset(){
 	BallX = canvas.width/3;
 	BallY = canvas.height/2;
