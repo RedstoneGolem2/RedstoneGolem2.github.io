@@ -243,7 +243,7 @@ function stopMove(e){
 	}
 }
 
-addEventListener("touchend", f);	
+addEventListener("touchstart", f);	
 
 function f(e){	
 	if(isStarted==true){	
