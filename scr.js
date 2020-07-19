@@ -243,6 +243,26 @@ function stopMove(e){
 	}
 }
 
+addEventListener("touchend", f);	
+
+function f(e){	
+	if(isStarted==true){	
+		if(death==false){	
+			if(isJumping==false){	
+				Y=0;	
+				jump();	
+				isJumping=true;	
+			}	
+		}	
+	}	
+	if(isStarted==false){	
+		Y=0;	
+		jump();	
+		isStarted=true;	
+		isJumping=true;	
+	}	
+}
+
 addEventListener("click", onClick);
 
 function onClick(e){
