@@ -253,21 +253,7 @@ function onClick(e){
 addEventListener("touchend", touc);
 
 function touc(){
-	if(isStarted==true){
-		if(death==false){
-			if(isJumping==false){
-				Y=0;
-				jump();
-				isJumping=true;
-			}
-		}
-	}
-	if(isStarted==false){
-		Y=0;
-		jump();
-		isStarted=true;
-		isJumping=true;
-	}
+	dead.play();
 }
 
 function reset(){
