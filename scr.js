@@ -32,6 +32,7 @@ let robo = new Image();
 let tabl = new Image();
 let restart = new Image();
 
+
 let score = new Audio();
 let fly = new Audio();
 let ded = new Audio();
