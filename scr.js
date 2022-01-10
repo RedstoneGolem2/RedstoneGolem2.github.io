@@ -222,13 +222,11 @@ function rand(){
 addEventListener("keydown", startMove);
 
 function startMove(e){
-	//****************************
-	if(e.keyCode == 71){
-		Coins++;
-	}
-	//****************************
 	if(isStarted==true){
 		if(death==false){
+			if(e.keyCode == 71){
+				Coins++;
+			}
 			if(e.keyCode == 32){
 				if(isJumping==false){
 					Y=0;
