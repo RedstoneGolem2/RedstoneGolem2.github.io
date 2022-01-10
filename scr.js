@@ -224,7 +224,7 @@ addEventListener("keydown", startMove);
 function startMove(e){
 	//****************************
 	if(e.keyCode == 71){
-		Coins+=100;
+		Coins++;
 	}
 	//****************************
 	if(isStarted==true){
