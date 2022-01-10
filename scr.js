@@ -66,6 +66,8 @@ PX3=canvas.width+megdu*2;
 function draw(){
 	context.beginPath();
 	
+	Coins++;
+	
 	// context.fillStyle = "skyblue";
 	// context.fillRect(0,0,canvas.width,canvas.height);
 	context.drawImage(bg,0,0);
@@ -226,7 +228,6 @@ function startMove(e){
 		if(death==false){
 			if(e.keyCode == 32){
 				if(isJumping==false){
-					Coins++;
 					Y=0;
 					jump();
 					isJumping=true;
